@@ -30,8 +30,26 @@ li {
     list-style: none;
 }
 
+.border-left {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: #a6f42e;
+    left: 0;
+}
+
+
+.border-bottom {
+    width: 35%;
+    height: 2px;
+    background: #a6f42e;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+/* MAIN CONTENT */
 .main-content {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     display: flex;
 }
 
@@ -42,7 +60,6 @@ li {
     position: absolute;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 9;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -61,14 +78,17 @@ li {
 
 /* SIDEBAR */
 .sidebar {
-    flex-basis: 250px;
+    flex-basis: 350px;
     background: #000;
     padding: 25px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
+
+
 .side-menu {
-    height: calc(100% - 80px);
+    height: calc(100% - 100px);
+    overflow-y: hidden;
 }
 
 .side-menu img {
@@ -85,10 +105,13 @@ li {
 .side-menu ul li a {
     display: flex;
     align-items: center;
+    vertical-align: middle;
 }
 
 .playlist {
-    flex-grow: 2;
+    height: calc(100% - 80px);
+    min-height: 250px;
+    overflow: auto;
 }
 
 .playlist .square {
@@ -116,6 +139,7 @@ li {
 
 .side-bottom {
     height: 80px;
+    background: #000;
 }
 
 .side-bottom img{
@@ -149,6 +173,7 @@ li {
 .content {
     position: relative;
     flex-grow: 1;
+    overflow-y: hidden;
 }
 
 .content .scrollable {
@@ -158,7 +183,7 @@ li {
 }
 
 .title {
-    line-height: 50px;
+    margin-top: 20px;
 }
 
 .title ul {
@@ -224,7 +249,7 @@ li {
 
 /* PLAYER CENTER */
 .music-player {
-    width: 50%;
+    width: 40%;
 }
 
 .music-player .icon-player {
@@ -252,7 +277,7 @@ li {
 }
 
 .time-bar .bar {
-    width: 80%;
+    width: 85%;
     height: 5px;
     border: 1px solid #808080;
     border-radius: 20px;
